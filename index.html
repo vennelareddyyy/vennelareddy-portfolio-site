@@ -1,360 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vennela Reddy Kattula | Data Engineer</title>
+    <title>Vennela Reddy Kattula | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
 
-    <!-- Navigation -->
     <nav class="navbar">
-        <a href="#" class="logo">VRK.</a>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Work</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode" style="cursor: pointer; font-size: 1.2rem; color: var(--text-main); margin-right: 1.5rem;">
+            <i class="fas fa-sun" style="display: none;" id="theme-icon-sun"></i>
+            <i class="fas fa-moon" id="theme-icon-moon"></i>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="hero">
-        <div class="hero-container">
-            <h1 class="hero-name reveal-text">Vennela Reddy Kattula</h1>
-            <p class="hero-subtitle reveal-text delay-1">Master’s Student in Computer Science | Data Science & AI</p>
+    <header id="hero" class="hero-section">
+        <div class="hero-social-bar">
+            <a href="https://github.com/vennela-reddy147" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vennela-reddy147/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:kattulavennela@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
 
-            <div class="status-badge reveal-text delay-2">
-                <span class="pulse"></span> #OPEN_TO_WORK
+        <div class="container hero-aadhyanth-split">
+            <!-- Left Side: Text & Actions -->
+            <div class="hero-content fade-in-up">
+                <p class="welcome-text">Welcome To My Portfolio</p>
+                <h2 class="greeting-white">Hi, I'm</h2>
+                <h1 class="name hero-name glowing-cyan-text">Vennela<br>Reddy</h1>
+                <div class="hero-badges" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <span class="hero-subtitle">Data Engineer</span>
+                    <span class="hero-subtitle">ML Enthusiast</span>
+                </div>
+                <p class="hero-quote script-quote">Learn. Build. Lead.</p>
+                
+                <p class="hero-tagline reveal-text delay-2" style="font-size: 1.15rem; color: var(--text-muted); max-width: 600px; margin-bottom: 2.5rem; line-height: 1.7;">
+                    Data science master's student specializing in scalable ETL pipelines and predictive ML models, turning complex data into elegant solutions.
+                </p>
+                
+                <div class="cta-buttons-left">
+                    <a href="#projects" class="btn-cyan-filled">View My Work &rarr;</a>
+                    <a href="#contact" class="btn-cyan-outline">Let's Connect</a>
+                </div>
             </div>
 
-            <div class="hero-actions reveal-text delay-3">
-                <a href="VR_Data_Engineer_Resume.pdf" target="_blank" download>
-  Download Resume
-</a>
-
-                <div class="social-icons">
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/vennelareddyyy" target="_blank"><i class="fab fa-github"></i></a>
+            <!-- Right Side: Profile Image -->
+            <div class="hero-image-container fade-in-up">
+                <div class="glowing-square-bg">
+                    <div class="floating-dot dot-1"></div>
+                    <div class="floating-dot dot-2"></div>
+                    <div class="floating-dot dot-3"></div>
+                    <img src="profile.jpg" alt="Vennela Reddy Kattula" class="hero-profile-square">
                 </div>
             </div>
         </div>
-
+        
         <div class="scroll-indicator">
-            <span>Scroll</span>
+            <span>SCROLL</span>
             <div class="line"></div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="scroll-section">
-        <div class="container small-container">
-            <h2 class="section-title">About Me.</h2>
-            <div class="about-text">
-                <p>I am currently pursuing my <strong>Master of Science in Computer Science</strong> at the
-                    <strong>University of North Carolina at Charlotte</strong> (GPA 4.0), building upon a strong
-                    technical foundation from my B.Tech in Electronics and Communication at <strong>VIT
-                        Vellore</strong>. My academic journey has been defined by a deep curiosity for how data shapes
-                    decision-making and a drive to build systems that transform raw information into actionable
-                    insights.
-                </p>
-
-                <p>With a robust skillset in <strong>Data Science, SQL, Machine Learning, and AI</strong>, I specialize
-                    in designing ETL/ELT pipelines, handling big data with <strong>Apache Spark and Databricks</strong>,
-                    and deploying scalable solutions on <strong>AWS</strong>. I enjoy tackling complex data
-                    challenges—whether it's optimizing ingestion throughput, ensuring data integrity, or developing
-                    predictive models.</p>
-
-                <p>Beyond the code, I pride myself on my <strong>problem-solving mindset</strong> and collaborative
-                    spirit. I believe that the best solutions come from understanding the "why" behind the data. I am
-                    <strong>actively seeking internship opportunities</strong> where I can apply my skills in Data
-                    Engineering and Software Development.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="scroll-section">
+    <section id="about" class="section glass-panel scroll-reveal">
         <div class="container">
-            <h2 class="section-title">Selected Works.</h2>
-            <div class="projects-list">
-
-                <!-- Project 1: IoT Smart ICU Monitoring System -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <span class="project-number">01</span>
-                        <h3 class="project-name">IoT Smart ICU Monitoring System</h3>
-                        <p class="project-role">Flagship Project • IEEE Published</p>
-                        <p class="project-desc">Real-time streaming framework capturing physiological signals via
-                            medical sensors and AWS IoT Core. Achieved 99% ingestion reliability and deployed
-                            event-driven emergency alerts.</p>
-                        <div class="tags">
-                            <span>AWS IoT Core</span><span>MQTT</span><span>Lambda</span><span>Real-time
-                                Analytics</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/vennelareddyyy/IOT_BASED_ICU_PATIENT_MONITORING_SYSTEM"
-                            target="_blank" class="btn-github" title="View Code on GitHub">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2: AgriVision -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <span class="project-number">02</span>
-                        <h3 class="project-name">AgriVision</h3>
-                        <p class="project-role">Machine Learning • Agriculture</p>
-                        <p class="project-desc">Integrated ML approach for crop yield prediction, market forecasting,
-                            and plant disease detection using DenseNet-121 types. Backend powered by Flask.</p>
-                        <div class="tags">
-                            <span>Python</span><span>Flask</span><span>DenseNet-121</span><span>ML</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/vennelareddyyy/agrivision_ml_backend" target="_blank"
-                            class="btn-github" title="View Code on GitHub">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3: CodSoft ML Internship Project -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <span class="project-number">03</span>
-                        <h3 class="project-name">CodSoft ML Internship Tasks</h3>
-                        <p class="project-role">Machine Learning • Internship</p>
-                        <p class="project-desc">Developed predictive models including Movie Genre Classification, Spam
-                            Detection, and Credit Card Fraud Detection. Focused on feature engineering and model
-                            evaluation.</p>
-                        <div class="tags">
-                            <span>Python</span><span>Scikit-Learn</span><span>Pandas</span><span>Classification</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/vennelareddyyy/CodSoft_task1" target="_blank" class="btn-github"
-                            title="View Code on GitHub">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4: AI Traffic & Waste Optimization -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <span class="project-number">04</span>
-                        <h3 class="project-name">AI Traffic & Waste Optimization</h3>
-                        <p class="project-role">Smart Cities • Deep Learning</p>
-                        <p class="project-desc">Sustainable city planning system using LSTM models for traffic
-                            forecasting and DenseNet-121 for waste classification to optimize urban flow.</p>
-                        <div class="tags">
-                            <span>LSTM</span><span>Deep Learning</span><span>Python</span><span>Data Analytics</span>
-                        </div>
-                    </div>
-                    <div class="project-link-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content" style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.15rem; line-height: 1.8;">
+                <p>
+                    I am an MS in Computer Science student at UNC Charlotte with a passion for turning raw data into meaningful stories. 
+                    From engineering scalable ETL pipelines to building predictive ML models, I enjoy solving complex challenges using AWS, Spark, and Python.
+                    A naturally curious problem-solver, I believe the best solutions come from understanding the "why" behind the numbers. 
+                    I am actively seeking internship opportunities where I can apply my skills to build impactful data-driven products!
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section (Cleaned) -->
-    <section id="experience" class="scroll-section">
-        <div class="container small-container">
-            <h2 class="section-title">Experience.</h2>
+    <section id="experience" class="section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
             <div class="timeline">
-
-                <!-- Machine Learning Intern -->
-                <div class="timeline-entry">
-                    <div class="timeline-year">Dec 2023 - Jan 2024</div>
-                    <div class="timeline-details">
+                <div class="timeline-item glass-panel hover-lift">
+                    <div class="timeline-date">Dec 2023 - Jan 2024</div>
+                    <div class="timeline-content">
                         <h3>Machine Learning Intern</h3>
-                        <p class="company">CodSoft • Internship</p>
-                        <ul class="exp-bullets">
-                            <li>Developed predictive models for text classification and financial security using Python,
-                                Scikit-Learn, and Pandas.</li>
-                            <li>Built a Movie Genre Classification system and a Spam Message Detector involving full
-                                data science lifecycle management.</li>
-                            <li>Implemented a Credit Card Fraud Detection model, handling feature engineering and
-                                algorithm optimization for high precision.</li>
-                        </ul>
+                        <h4>CodSoft</h4>
+                        <p>Developed predictive models for text classification and financial security. Built a Movie Genre Classification system, a Spam Message Detector, and a Credit Card Fraud Detection model using Python, Scikit-Learn, and Pandas. Involved in the full data science lifecycle, from Feature Engineering to optimizing algorithms for high-precision results.</p>
                     </div>
                 </div>
 
-                <!-- Web Design Intern -->
-                <div class="timeline-entry">
-                    <div class="timeline-year">Oct 2023 - Dec 2023</div>
-                    <div class="timeline-details">
-                        <h3>Web Design & Digital Marketing Intern</h3>
-                        <p class="company">Empower SoftTech • Internship</p>
-                        <ul class="exp-bullets">
-                            <li>Led end-to-end development of live websites using WordPress for clients like Khushi
-                                Dental Clinic and Akruthi Dental Care.</li>
-                            <li>Executed comprehensive Digital Marketing strategies to enhance online visibility and
-                                drive user engagement.</li>
-                            <li>Managed real-world client requirements, ensuring high-performance web solutions and
-                                effective marketing integration.</li>
-                        </ul>
+                <div class="timeline-item glass-panel hover-lift">
+                    <div class="timeline-date">Oct 2023 - Dec 2023</div>
+                    <div class="timeline-content">
+                        <h3>Web Design and Digital Marketing Intern</h3>
+                        <h4>Empower SoftTech</h4>
+                        <p>Led end-to-end development of live websites using WordPress for Khushi Dental Clinic, Akruthi Dental Care, and Sree Vaagdevi High School. Executed comprehensive Digital Marketing strategies (SEO) to improve online visibility and user engagement.</p>
                     </div>
                 </div>
 
-                <!-- Java Developer Intern -->
-                <div class="timeline-entry">
-                    <div class="timeline-year">Sep 2023 - Dec 2023</div>
-                    <div class="timeline-details">
+                <div class="timeline-item glass-panel hover-lift">
+                    <div class="timeline-date">Sep 2023 - Dec 2023</div>
+                    <div class="timeline-content">
                         <h3>Java Developer Intern</h3>
-                        <p class="company">Internship</p>
-                        <ul class="exp-bullets">
-                            <li>Developed scalable web and desktop applications using Core and Advanced Java, mastering
-                                Servlet Chaining and JSP.</li>
-                            <li>Implemented system architectures utilizing Inheritance, Abstract Classes, and JDBC for
-                                dynamic content management.</li>
-                            <li>Optimized application performance through Multithreading and designed robust user
-                                interfaces with AWT Frames.</li>
-                        </ul>
+                        <h4>Internship</h4>
+                        <p>Developed scalable web and desktop applications using Core & Advanced Java. Implemented system architectures with Abstract Classes & Access Levels. Mastered Servlet Chaining, JSP Implicit Objects, and JDBC. Optimized performance through Multithreading and designed UIs using AWT Frames.</p>
                     </div>
                 </div>
 
-                <!-- BHEL Intern -->
-                <div class="timeline-entry">
-                    <div class="timeline-year">Aug 2023 - Sep 2023</div>
-                    <div class="timeline-details">
-                        <h3>Project Intern</h3>
-                        <p class="company">Bharat Heavy Electricals Limited (BHEL) • Internship</p>
-                        <ul class="exp-bullets">
-                            <li>Conducted an intensive study of Distributed Control Systems (DCS) for large-scale power
-                                plant operations.</li>
-                            <li>Analyzed the integration of hardware sensors and automated control logic to ensure
-                                real-time communication reliability.</li>
-                            <li>Studied fail-safe architectures and industrial monitoring protocols for managing complex
-                                physical infrastructures.</li>
-                        </ul>
+                <div class="timeline-item glass-panel hover-lift">
+                    <div class="timeline-date">Aug 2023 - Sep 2023</div>
+                    <div class="timeline-content">
+                        <h3>Industrial Automation Intern</h3>
+                        <h4>Bharat Heavy Electricals Limited (BHEL)</h4>
+                        <p>Conducted an intensive industrial study of Distributed Control Systems (DCS) used in large-scale power plant operations. Analyzed the integration of hardware sensors and automated control logic, focusing on real-time communication protocols and fail-safe architectures.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section id="leadership" class="scroll-section">
-        <div class="container small-container">
-            <h2 class="section-title">Leadership.</h2>
-            <ul class="clean-list">
-                <li>Mentored students at <strong>Konark High School</strong> through structured study groups.</li>
-                <li>Led community outreach events for <strong>Club Ayuda</strong> and <strong>German Club</strong>.</li>
-                <li>Authored and led a team for an article on communication and user experience.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Certifications & Professional Learning Section -->
-    <section id="certifications" class="scroll-section">
-        <div class="container small-container">
-            <h2 class="section-title">Certifications & Professional Learning.</h2>
-            <div class="cert-grid">
-
-                <!-- AWS Academy -->
-                <div class="cert-card graduated">
-                    <i class="fas fa-graduation-cap cert-icon"></i>
-                    <div class="cert-info">
-                        <span class="cert-type">Certification / Graduate</span>
-                        <h3>AWS Academy Graduate</h3>
-                        <p class="cert-subtitle">Data Engineering</p>
-                        <p class="cert-skills">ETL Pipelines, Cloud Data Workflows, Analytics, Scalable Data Systems</p>
-                    </div>
-                </div>
-
-                <!-- Udemy: Cloud Practitioner -->
-                <div class="cert-card course">
-                    <i class="fab fa-aws cert-icon"></i>
-                    <div class="cert-info">
-                        <span class="cert-type">Course – Udemy</span>
-                        <h3>Ultimate AWS Certified Cloud Practitioner</h3>
-                        <p class="cert-subtitle">CLF-C02 2026</p>
-                        <p class="cert-skills">AWS Core Services, Cloud Concepts, Security & IAM, Pricing & Architecture
+    <section id="projects" class="section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card glass-panel hover-lift">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">IoT Smart ICU Patient Monitoring System</h3>
+                            <span class="project-badge" style="font-size: 0.7rem; background: #1e293b; color: #66fcf1; padding: 0.2rem 0.6rem; border-radius: 12px; margin-bottom: 0.5rem; display: inline-block;">IEEE Published</span>
+                        </div>
+                        <p class="project-desc">
+                            Proposed and implemented a smart ICU monitoring architecture using IoT edge computing and cloud analytics. Integrated sensor nodes for high-frequency data collection and developed an automated emergency alerting system.
                         </p>
+                        <div class="tech-stack">
+                            <span>AWS IoT Core</span>
+                            <span>Edge Computing</span>
+                            <span>Cloud Analytics</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                            <a href="https://ieeexplore.ieee.org" target="_blank" class="btn-github"><i class="fas fa-external-link-alt"></i> IEEE</a>
+                            <a href="https://github.com/vennela-reddy147" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Coursera: ML -->
-                <div class="cert-card course">
-                    <i class="fas fa-book-open cert-icon"></i>
-                    <div class="cert-info">
-                        <span class="cert-type">Professional Course</span>
-                        <h3>Machine Learning with Python</h3>
-                        <p class="cert-subtitle">Coursera</p>
-                        <p class="cert-skills">Supervised & Unsupervised Learning, Model Evaluation</p>
+                <article class="project-card glass-panel hover-lift">
+                    <div class="project-content">
+                        <h3 class="project-title">AgriVision: Smart Agriculture ML Pipeline</h3>
+                        <p class="project-desc">
+                            Built a full-stack ML application to predict crop yield, recommend optimal crops, and detect plant diseases using DenseNet-121. Integrated models for real-time, data-driven agricultural insights.
+                        </p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>DenseNet-121</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1.5rem;">
+                            <a href="https://github.com/vennela-reddy147" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Coursera: Data Science Foundations -->
-                <div class="cert-card course">
-                    <i class="fas fa-chart-line cert-icon"></i>
-                    <div class="cert-info">
-                        <span class="cert-type">Professional Course</span>
-                        <h3>Data Science Foundations</h3>
-                        <p class="cert-subtitle">Coursera</p>
-                        <p class="cert-skills">Data Analysis, Visualization, Statistical Thinking</p>
+                <article class="project-card glass-panel hover-lift" style="position: relative; overflow: hidden;">
+                    <!-- Floating Tech Background -->
+                    <div class="floating-tech-bg">
+                        <i class="fab fa-python tech-icon" style="font-size: 2rem; color: rgba(56, 189, 248, 0.15); position: absolute; top: 10%; right: 10%; animation: floatItem 8s ease-in-out infinite;"></i>
+                        <i class="fas fa-network-wired tech-icon" style="font-size: 2.5rem; color: rgba(56, 189, 248, 0.1); position: absolute; bottom: 20%; right: 5%; animation: floatItem 10s ease-in-out infinite 1s;"></i>
+                        <i class="fas fa-database tech-icon" style="font-size: 1.5rem; color: rgba(56, 189, 248, 0.12); position: absolute; top: 40%; right: 25%; animation: floatItem 7s ease-in-out infinite 2s;"></i>
+                        <i class="fas fa-car tech-icon" style="font-size: 3rem; color: rgba(56, 189, 248, 0.08); position: absolute; bottom: 10%; left: 40%; animation: floatItem 12s ease-in-out infinite 0.5s;"></i>
                     </div>
-                </div>
 
-                <!-- Coursera: SQL -->
-                <div class="cert-card course">
-                    <i class="fas fa-database cert-icon"></i>
-                    <div class="cert-info">
-                        <span class="cert-type">Professional Course</span>
-                        <h3>SQL for Data Analysis</h3>
-                        <p class="cert-subtitle">Coursera</p>
-                        <p class="cert-skills">Advanced SQL Queries, Joins, Subqueries</p>
+                    <div class="project-content" style="position: relative; z-index: 1;">
+                        <h3 class="project-title">AI Traffic Optimization System</h3>
+                        <p class="project-desc">
+                            Developed an intelligent traffic management system analyzing real-time data flows to optimize routing, reduce congestion, and improve urban mobility using advanced predictive algorithms.
+                        </p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                            <span>AI Algorithms</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1.5rem;">
+                            <a href="https://github.com/vennela-reddy147" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Coursera: Python -->
-                <div class="cert-card course">
-                    <i class="fas fa-code cert-icon"></i>
-                    <div class="cert-info">
-                        <span class="cert-type">Professional Course</span>
-                        <h3>Python for Data Science</h3>
-                        <p class="cert-subtitle">Coursera</p>
-                        <p class="cert-skills">Data Manipulation, Pandas, NumPy, Real-world Datasets</p>
-                    </div>
-                </div>
-
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container center-text">
-            <h2 class="footer-title">Let's Connect.</h2>
-            <p>Always open to discussing data engineering, AI, or new opportunities.</p>
-            <div class="footer-links">
-                <a href="mailto:kattulavennela@gmail.com">Email</a>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-                <a href="https://github.com/vennelareddyyy" target="_blank">GitHub</a>
+    <section id="skills" class="section glass-panel scroll-reveal stagger-children" style="position: relative; overflow: hidden;">
+        <div class="floating-tech-bg" style="opacity: 0.6; pointer-events: none;">
+            <i class="fab fa-react tech-icon" style="font-size: 3rem; color: rgba(56, 189, 248, 0.15); position: absolute; top: 15%; right: 10%; animation: floatItem 10s ease-in-out infinite;"></i>
+            <i class="fab fa-js tech-icon" style="font-size: 2.5rem; color: rgba(56, 189, 248, 0.1); position: absolute; bottom: 25%; right: 20%; animation: floatItem 12s ease-in-out infinite 2s;"></i>
+            <i class="fab fa-python tech-icon" style="font-size: 4rem; color: rgba(56, 189, 248, 0.08); position: absolute; top: 30%; left: 10%; animation: floatItem 15s ease-in-out infinite 1s;"></i>
+            <i class="fas fa-database tech-icon" style="font-size: 2rem; color: rgba(56, 189, 248, 0.12); position: absolute; bottom: 15%; left: 25%; animation: floatItem 8s ease-in-out infinite 3s;"></i>
+             <i class="fab fa-aws tech-icon" style="font-size: 3.5rem; color: rgba(56, 189, 248, 0.1); position: absolute; top: 60%; right: 5%; animation: floatItem 14s ease-in-out infinite 0.5s;"></i>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category hover-glow" style="flex: 1; min-width: 300px;">
+                    <h3 style="margin-bottom: 1.5rem; color: #38bdf8;">Core Skills</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-container" style="margin-bottom: 1.2rem;">
+                            <div class="skill-info" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.95rem;">
+                                <span>Data Science</span>
+                                <span style="color: #66fcf1;">90%</span>
+                            </div>
+                            <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(31, 40, 51, 0.8); border-radius: 10px; overflow: hidden;">
+                                <div class="progress-fill" data-width="90%" style="width: 0; height: 100%; background: var(--gradient-text); border-radius: 10px; transition: width 1.5s ease-out;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-container" style="margin-bottom: 1.2rem;">
+                            <div class="skill-info" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.95rem;">
+                                <span>SQL</span>
+                                <span style="color: #66fcf1;">85%</span>
+                            </div>
+                            <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(31, 40, 51, 0.8); border-radius: 10px; overflow: hidden;">
+                                <div class="progress-fill" data-width="85%" style="width: 0; height: 100%; background: var(--gradient-text); border-radius: 10px; transition: width 1.5s ease-out 0.2s;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-container" style="margin-bottom: 1.2rem;">
+                            <div class="skill-info" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.95rem;">
+                                <span>Machine Learning & AI</span>
+                                <span style="color: #66fcf1;">80%</span>
+                            </div>
+                            <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(31, 40, 51, 0.8); border-radius: 10px; overflow: hidden;">
+                                <div class="progress-fill" data-width="80%" style="width: 0; height: 100%; background: var(--gradient-text); border-radius: 10px; transition: width 1.5s ease-out 0.4s;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-container" style="margin-bottom: 1.2rem;">
+                            <div class="skill-info" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.95rem;">
+                                <span>Python & Java</span>
+                                <span style="color: #66fcf1;">88%</span>
+                            </div>
+                            <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(31, 40, 51, 0.8); border-radius: 10px; overflow: hidden;">
+                                <div class="progress-fill" data-width="88%" style="width: 0; height: 100%; background: var(--gradient-text); border-radius: 10px; transition: width 1.5s ease-out 0.6s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category hover-glow" style="flex: 1; min-width: 300px;">
+                    <h3 style="margin-bottom: 1.5rem; color: #38bdf8;">Cloud & Tools</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-container" style="margin-bottom: 1.2rem;">
+                            <div class="skill-info" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.95rem;">
+                                <span>AWS</span>
+                                <span style="color: #66fcf1;">75%</span>
+                            </div>
+                            <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(31, 40, 51, 0.8); border-radius: 10px; overflow: hidden;">
+                                <div class="progress-fill" style="width: 75%; height: 100%; background: var(--gradient-text); border-radius: 10px; animation: fillBar 1.5s ease-out forwards 0.3s; opacity: 0;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-container" style="margin-bottom: 1.2rem;">
+                            <div class="skill-info" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.95rem;">
+                                <span>Pandas & Scikit-Learn</span>
+                                <span style="color: #66fcf1;">92%</span>
+                            </div>
+                            <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(31, 40, 51, 0.8); border-radius: 10px; overflow: hidden;">
+                                <div class="progress-fill" style="width: 92%; height: 100%; background: var(--gradient-text); border-radius: 10px; animation: fillBar 1.5s ease-out forwards 0.5s; opacity: 0;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-container" style="margin-bottom: 1.2rem;">
+                            <div class="skill-info" style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.95rem;">
+                                <span>Data Analytics</span>
+                                <span style="color: #66fcf1;">85%</span>
+                            </div>
+                            <div class="progress-bg" style="width: 100%; height: 8px; background: rgba(31, 40, 51, 0.8); border-radius: 10px; overflow: hidden;">
+                                <div class="progress-fill" style="width: 85%; height: 100%; background: var(--gradient-text); border-radius: 10px; animation: fillBar 1.5s ease-out forwards 0.7s; opacity: 0;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="copyright">&copy; 2025 Vennela Reddy Kattula.</p>
+        </div>
+    </section>
+
+
+    <section id="education" class="section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-grid">
+                <div class="edu-card glass-panel hover-lift">
+                    <div class="edu-header">
+                        <h3>Master of Science in Computer Science</h3>
+                        <span class="edu-year">2025 - 2027</span>
+                    </div>
+                    <h4>University of North Carolina at Charlotte</h4>
+                    <p class="gpa">GPA: <strong>4.0</strong></p>
+                </div>
+                <div class="edu-card glass-panel hover-lift">
+                    <div class="edu-header">
+                        <h3>B.Tech in Electronics & Communication</h3>
+                        <span class="edu-year">2021 - 2025</span>
+                    </div>
+                    <h4>Vellore Institute of Technology</h4>
+                    <p class="gpa">GPA: <strong>3.6</strong></p>
+                </div>
+            </div>
+            
+             <div class="cert-grid">
+                <h3 class="cert-section-title">CERTIFICATIONS</h3>
+                <p class="cert-section-subtitle">Professional credentials in data engineering, machine learning, and cloud</p>
+                
+                <!-- Cert 1 -->
+                <div class="cert-card-neon">
+                    <span class="badge-featured">FEATURED</span>
+                    <i class="fas fa-award cert-icon-top"></i>
+                    <h4 class="cert-title-neon">AWS ACADEMY GRADUATE</h4>
+                    <span class="cert-source-neon">Data Engineering</span>
+                    <div class="cert-date-neon">January 2024</div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card-neon active-tilt">
+                    <span class="badge-featured">FEATURED</span>
+                    <i class="fas fa-award cert-icon-top"></i>
+                    <h4 class="cert-title-neon">ULTIMATE AWS PRACTITIONER</h4>
+                    <span class="cert-source-neon">Course - Udemy</span>
+                    <div class="cert-date-neon">December 2023</div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card-neon">
+                    <i class="fas fa-certificate cert-icon-top"></i>
+                    <h4 class="cert-title-neon">MACHINE LEARNING WITH PYTHON</h4>
+                    <span class="cert-source-neon">Coursera</span>
+                    <div class="cert-date-neon">November 2023</div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-card-neon">
+                    <i class="fas fa-certificate cert-icon-top"></i>
+                    <h4 class="cert-title-neon">DATA SCIENCE FOUNDATIONS</h4>
+                    <span class="cert-source-neon">Coursera</span>
+                    <div class="cert-date-neon">October 2023</div>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="cert-card-neon">
+                    <i class="fas fa-certificate cert-icon-top"></i>
+                    <h4 class="cert-title-neon">SQL FOR DATA ANALYSIS</h4>
+                    <span class="cert-source-neon">Coursera</span>
+                    <div class="cert-date-neon">September 2023</div>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="cert-card-neon">
+                    <i class="fas fa-certificate cert-icon-top"></i>
+                    <h4 class="cert-title-neon">PYTHON FOR DATA SCIENCE</h4>
+                    <span class="cert-source-neon">Coursera</span>
+                    <div class="cert-date-neon">August 2023</div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section scroll-reveal">
+        <div class="container container-box">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-box glass-panel">
+                <div class="resume-inner">
+                    <i class="fas fa-file-alt resume-icon"></i>
+                    <h3>Download My Resume</h3>
+                    <p class="resume-desc">Review my complete background, technical skills, and project history.</p>
+                    <a href="Vennela_Reddy_Resume.pdf" class="btn btn-outline-blue" download><i class="fas fa-download"></i> Get Resume (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section scroll-reveal">
+        <div class="container container-box">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-form-container">
+                <!-- Form Area -->
+                <div class="contact-form-box glass-panel">
+                    <div class="form-header-text">
+                        <h3 class="form-heading">Let's get in touch</h3>
+                        <p class="form-subheading">Let's catch up and take things to the next level! Feel free to send your queries or messages in the box below, and let's get started.</p>
+                    </div>
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="input-group">
+                            <label for="email">Your email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@gmail.com">
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Subject">
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Your message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="What's on your mind..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-blue-solid send-btn">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links-footer">
+                <a href="mailto:kattulavennela@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/vennela-reddy147/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/vennela-reddy147"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Vennela Reddy Kattula. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
-
 </html>
